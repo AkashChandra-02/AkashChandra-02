@@ -1,0 +1,14 @@
+.navbar {
+  background-color: #ffffff;	
+  line-height: 45px;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  padding: 0.5rem 1rem;
+  
+}
