@@ -1,6 +1,16 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
 .navbar {
-  background-color: #ffffff;	
-  line-height: 45px;
+  background-color: #252525;	
+  line-height: 90px;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -11,4 +21,40 @@
   -ms-flex-pack: justify;
   padding: 0.5rem 1rem;
   
+}
+
+.navbar a {
+  block-size: 90px;
+  font-weight: bolder;
+  position: center;
+  float: left;
+  color: #dddddd;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+
+body > .container {
+  padding: 25px 0px 0;
+}
+
+h1, h2, p
+{
+	color: #252525;
+	font-family: "Times New Roman", Times, serif;
+	padding-left: 15px;
+    padding-right: 15px;
+}
+
+hr
+{
+	height: 5px;
+    background-color: #252525;
+    border: none;
 }
