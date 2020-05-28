@@ -48,13 +48,12 @@ h1, h2, p
 {
 	color: #252525;
 	font-family: "Times New Roman", Times, serif;
-	padding-left: 15px;
-    padding-right: 15px;
+	/*padding-left: 15px;
+    padding-right: 15px;*/
 }
 
 hr
 {
-	height: 5px;
     background-color: #252525;
     border: none;
 }
