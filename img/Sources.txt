@@ -1,3 +1,4 @@
 Arduino Analog Radar: https://www.adafruit.com/product/2853
 GRMS Radio Decoding: https://www.rtl-sdr.com/roundup-software-defined-radios
 Halloween Fests: https://www.pngfind.com/mpng/hmomhRx_halloween-pumpkin-transparent-images-halloween-pumpkin-transparent-hd/
+Robotics Relay: https://www.grainger.com/product/GRAINGER-APPROVED-Automotive-Relay-5ZMU4
