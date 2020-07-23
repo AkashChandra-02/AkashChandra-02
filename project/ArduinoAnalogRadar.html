@@ -30,11 +30,20 @@
 	
 	<p><h5>System Map</h5></p>
 	<img src="../img/SystemMapAAR.png">
-	<p>The antenna will have a spinning cover that will expose a section of the surrounding. Using the MOSFET and photointerrupter, I can time how long it takes for a certain </p>
+	<p>The antenna will have a spinning cover that will expose a section of the surrounding with an "aperture" to allow the antenna to receive. 
+	Using the MOSFET and photointerrupter, I can time how long the "aperture" in the cover is open and correspond it to an LED.
+	The antenna will be tuned to the frequency I want, so in this case I'm going to use one tuned to ~462 MHz. Once the antenna picks up the signal, it is going to be amplified and then I will then pick up it's envelope and send that to the Arduino.</p>
 	
 	<p><h5>Development</h5></p>
 	<p>I started with the Arduino sketch, since I was still trying to design the amplifer and envelope detector to feed into the Arduino. The first step I took was to get the Neopixel ring working based off of the given sketches. 
-	After I blinded myself with the Neopixel, I started to write the sketch. </p>
+	After I blinded myself with the Neopixel, I started to write the sketch. The functions of the sketch is:
+	<br><ol>
+	<li>Time how long the motor takes to move the aperture.</li>
+	<li>Flash the Neopixel green to show that it was ready.</li>
+	<li>Stop the motor.</li>
+	<li><b>In the Loop:</b></li><ol>
+	<li>Start the motor spinning again.</li>
+	</ol></ol></p>
 	
 	<p><b>Source Code:</b> The Arduino sketch can be found on GitHub at <a href="https://github.com/AkashChandra-02/ArduinoAnalogRadar">AkashChandra-02/ArduinoAnalogRadar</a>.</p>
 		
