@@ -38,12 +38,19 @@
 	<p>I started with the Arduino sketch, since I was still trying to design the amplifer and envelope detector to feed into the Arduino. The first step I took was to get the Neopixel ring working based off of the given sketches. 
 	After I blinded myself with the Neopixel, I started to write the sketch. The functions of the sketch is:
 	<br><ol>
+	<li><b>In the setup():</b></li><ol>
 	<li>Time how long the motor takes to move the aperture.</li>
 	<li>Flash the Neopixel green to show that it was ready.</li>
 	<li>Stop the motor.</li>
-	<li><b>In the Loop:</b></li><ol>
 	<li>Start the motor spinning again.</li>
-	</ol></ol></p>
+	<li>Calculate how many samples to read, if each sample is read in every 10 milliseconds.</li>
+	</ol><li><b>In the loop():</b></li><ol>
+		<li>For each LED:</li><ol>
+			<li>Read in the number of samples needed.</li>
+			<li>Take an average of all the samples.</li>
+			<li>Map the sample average to an RGB value.</li>
+			<li>Apply the RGB value to the neopixel strip.</li>
+	</ol></ol></ol></p>
 	
 	<p><b>Source Code:</b> The Arduino sketch can be found on GitHub at <a href="https://github.com/AkashChandra-02/ArduinoAnalogRadar">AkashChandra-02/ArduinoAnalogRadar</a>.</p>
 		
