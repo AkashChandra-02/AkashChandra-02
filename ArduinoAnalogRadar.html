@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="SHORTCUT ICON" href="../favicon.ico" type="image/x-icon" />
+<link rel="ICON" href="../favicon.ico" type="image/ico" />
+
+<title>Arduino Analog Radar</title>
+
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<header>
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-md fixed-top">
+					
+			<!--Index link-->
+			<a class="navbar-brand" href="../index.html">Akash Chandra</a>	
+				
+			<a class="navbar-brand" href="../projects.html">Projects</a>
+			<a class="navbar-brand" href="../AkashChandraResume.pdf">Resume</a>	
+			
+		</nav> 
+	</header>
+	<div class="container">
+	<h1>Arduino Analog Radar</h1>
+	
+	<p><h5>Introduction</h5></p><p>I wanted to design and build something that didn't rely on my computer or the RTL-SDR. 
+	Since my friends had radios that worked on the GMRS (General Mobile Radio Service) band, I decided that I would try to display the location of GMRS radios relative to the user with a 12 pixel neopixel ring.</p>
+	
+	<p><h5>System Map</h5></p>
+	<img src="../img/SystemMapAAR.png">
+	<p>The antenna will have a spinning cover that will expose a section of the surrounding with an "aperture" to allow the antenna to receive. 
+	Using the MOSFET and photointerrupter, I can time how long the "aperture" in the cover is open and correspond it to an LED.
+	The antenna will be tuned to the frequency I want, so in this case I'm going to use one tuned to ~462 MHz. Once the antenna picks up the signal, it is going to be amplified and then I will then pick up it's envelope and send that to the Arduino.</p>
+	
+	<p><h5>Development</h5></p>
+	<p>I started with the Arduino sketch, since I was still trying to design the amplifer and envelope detector to feed into the Arduino. The first step I took was to get the Neopixel ring working based off of the given sketches. 
+	After I blinded myself with the Neopixel, I started to write the sketch. The functions of the sketch is:
+	<br><ol>
+	<li><b>In the setup():</b></li><ol>
+	<li>Time how long the motor takes to move the aperture.</li>
+	<li>Flash the Neopixel green to show that it was ready.</li>
+	<li>Stop the motor.</li>
+	<li>Start the motor spinning again.</li>
+	<li>Calculate how many samples to read, if each sample is read in every 10 milliseconds.</li>
+	</ol><li><b>In the loop():</b></li><ol>
+		<li>For each LED:</li><ol>
+			<li>Read in the number of samples needed.</li>
+			<li>Take an average of all the samples.</li>
+			<li>Map the sample average to an RGB value.</li>
+			<li>Apply the RGB value to the neopixel strip.</li>
+	</ol></ol></ol></p>
+	
+	<p><b>Source Code:</b> The Arduino sketch can be found on GitHub at <a href="https://github.com/AkashChandra-02/ArduinoAnalogRadar">AkashChandra-02/ArduinoAnalogRadar</a>.</p>
+		
+	</div>
+</body>
+</html>
