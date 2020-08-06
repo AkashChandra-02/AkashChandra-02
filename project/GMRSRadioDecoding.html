@@ -23,7 +23,24 @@
 		</nav> 
 	</header>
 	<div class="container">
-	<!--Content Goes here-->
+	<h1>GMRS Radio Decoding</h1>
+	
+	<p><h5>Introduction</h5></p>
+	<p>After doing all the usual SDR things, such as hearing radio traffic and picking up satalites, I wanted to do more with the dongle and understand the complexities of radio systems.</p>
+	
+	<p><h5>Development</h5></p>
+	<p>I started to look for a python libary. <a href="https://pypi.org/project/pyrtlsdr/">I found pyrtlsdr</a>, which is a python wrapper for the  RTL-SDR C libary. 
+	I went online and found a <a href="https://gist.github.com/ffund/1d0fb274f5772c1c908d1ea7e66c992e#file-fm-radio-py">tutorial</a> on FM signal processing by Fraida Fund. One thing I noticed is that if I use python, it runs slowly. 
+	In order to speed up the program, I decided move to C.</p>
+	
+	<p><b>Source Code:</b> The Arduino sketch can be found on GitHub at <a href="https://github.com/AkashChandra-02/GMRSRadioDecoding">AkashChandra-02/GMRSRadioDecoding</a>.</p>
+	
+	<p><h5>Credits:</h5></p><ul>
+	<li><a href="https://gist.github.com/ffund/1d0fb274f5772c1c908d1ea7e66c992e#file-fm-radio-py">Fraida Fund</a>: FM signal processing tutorial</li>
+	<li><a href="https://github.com/roger-/pyrtlsdr">Roger D</a>: pyrtlsdr</li>
+	<p></p></ul>
+	
+	
 	</div>
 </body>
 </html>
